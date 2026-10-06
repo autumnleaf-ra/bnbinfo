@@ -1,0 +1,9 @@
+services:
+  bnb-signal-bot:
+    build: .
+    container_name: bnb_signal_bot
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - ./state.json:/app/state.json
